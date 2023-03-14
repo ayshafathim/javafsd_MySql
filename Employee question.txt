@@ -1,0 +1,65 @@
+1. Create a employee table and department table  
+
+
+CREATE TABLE Employee ( 
+
+    employee_id INT NOT NULL AUTO_INCREMENT, 
+
+    first_name VARCHAR(50) NOT NULL, 
+
+    last_name VARCHAR(50) NOT NULL, 
+
+    email VARCHAR(100) UNIQUE NOT NULL, 
+
+    phone VARCHAR(20), 
+
+    hire_date DATE NOT NULL, 
+
+    job_title VARCHAR(50) NOT NULL, 
+
+    department_id INT NOT NULL, 
+
+    salary DECIMAL(10,2) NOT NULL, 
+
+    PRIMARY KEY (employee_id), 
+
+    FOREIGN KEY (department_id) REFERENCES Department(department_id) 
+
+); 
+
+CREATE TABLE Department ( 
+
+    department_id INT NOT NULL AUTO_INCREMENT, 
+
+    department_name VARCHAR(50) NOT NULL, 
+
+    manager_id INT, 
+
+    location VARCHAR(100), 
+
+    PRIMARY KEY (department_id) 
+
+); 
+
+
+
+2.Write a query to fetch the first_name from the Employee table in the upper case and use the ALIAS name as EmpName. 
+
+3.Write a query to fetch the number of employees working in the department ‘HR’. 
+
+4. Write a query to get the current date. 
+
+5.Write a query to retrieve the first four characters of  EmpLname from the EmployeeInfo table. 
+
+6.Write a query to fetch only the place name(string before brackets) from the Address column of EmployeeInfo table. 
+
+7.Write a query to create a new table that consists of data and structure copied from the other table. 
+
+8. Write q query to find all the employees whose salary is between 50000 to 100000. 
+
+9. Write a query to find the names of employees that begin with ‘S’. 
+
+10. Write a query to fetch top N records. 
+
+11. Write a query to retrieve the EmpFname and EmpLname in a single column as “FullName”. The first name and the last name must be separated with space. 
+
